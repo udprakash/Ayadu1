@@ -9,7 +9,15 @@
       <div class="panel-body">
       	<h3><%= @pin.title %></h3>
         <p><%= @pin.description %></p>
-        <p><strong><%= @pin.user.email if @pin.user %></strong></p>
+
+        Daily Rs:<%= @pin.daily %><br/>
+        Weekly Rs:<%= @pin.weekly %><br/>
+        Monthly Rs:<%= @pin.monthly %><br/>
+        Advance Rs:<%= @pin.advance %><br/>
+
+        
+
+        <p><strong><%= @pin.user.name if @pin.user %></strong></p>
 
         <% if @pin.user == current_user %>
          <%= link_to edit_pin_path(@pin) do %>
